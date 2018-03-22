@@ -102,8 +102,6 @@ def Buy(amount):
 	order = client.order_market_buy(
 		symbol=pair,
 		quantity=amount,
-		#newClientOrderId=str(oID),
-		newOrderRespType="FULL",
 		recvWindow=1000)
 	return order
 
@@ -111,8 +109,6 @@ def Sell(amount):
 	order = client.order_market_sell(
 		symbol=pair,
 		quantity=amount,
-		#newClientOrderId=str(oID),
-		newOrderRespType="FULL",
 		recvWindow=1000)
 	return order
 
