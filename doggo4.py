@@ -88,8 +88,7 @@ def login():
 def sendNotification(subject,mesg):
 	try:
 		sent_from = gmail_user   
-		msg='Subject:{}\n\n'+mesg
-		msg=msg.format(subject)
+		msg='Subject:'+subject+'\n\n'+mesg.format(subject)
 		server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 		server.ehlo()
 		server.login(gmail_user, gmail_password)
